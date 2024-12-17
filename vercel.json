@@ -11,14 +11,12 @@
             "dest": "/public/$1.$2"
         },
         {
-            "src": "/images/(.*)",
-            "dest": "/public/images/$1"
-        },
-        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
     ],
+    "public": true,
+    "outputDirectory": "public",
     "env": {
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
