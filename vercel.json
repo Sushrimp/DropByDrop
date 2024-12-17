@@ -1,8 +1,9 @@
 {
     "version": 2,
+    "framework": null,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.6.0"
+            "runtime": "vercel-php@0.7.3"
         }
     },
     "routes": [
@@ -16,6 +17,7 @@
         }
     ],
     "public": true,
+    "buildCommand": "npm install && npm run build",
     "outputDirectory": "public",
     "env": {
         "APP_CONFIG_CACHE": "/tmp/config.php",
