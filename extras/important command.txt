@@ -1,0 +1,24 @@
+composer install
+
+mesti generate app key cok (beda sama database password)
+
+php artisan migrate
+
+php artisan make:migration
+> enter name?: create_posts_table
+
+php artisan migrate:fresh (DELETE SEMUA DATABASE DATA DANGER!)
+
+php artisan tinker 
+> App\Models\User::factory(3)->create();
+
+php artisan make:model    
+  What should the model be named?
+❯ Post
+
+cp .env.example .env
+php artisan key:generate
+
+(buat test login)
+blue88dynamixx@gmail.com
+12345
