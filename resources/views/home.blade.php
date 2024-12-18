@@ -27,7 +27,7 @@
         </video>
 
       <div id="home-section-2" class="relative text-white font-serif">
-        <img class="brightness-50" src="/images/home 01-water-new.png">
+        <img class="brightness-50" src="images/home 01-water-new.png">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
           <p class="text-3xl text-center mb-4">Our water needs attention.</p>
           <p>
@@ -61,7 +61,7 @@
           </p>
         </div>
         <div id="right" class="w-1/2">
-          <img src="/images/globalwatercrisis.png" />
+          <img src="images/globalwatercrisis.png" />
         </div>
       </div>
       <div id="home-section-3" class="py-6 px-16 mb-10">
