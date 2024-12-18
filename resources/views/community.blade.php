@@ -13,7 +13,7 @@
     <div class="min-h-full">
         <x-navbar />
         <header class="bg-white">
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex justify-evenly">
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
                 <h1 class="text-4xl font-bold tracking-tight text-defaultColor">
                     Community
                 </h1>

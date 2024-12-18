@@ -12,7 +12,7 @@
   <div class="min-h-full">
     <x-navbar/>
     <header class="bg-white">
-      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex justify-evenly">
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
           <h1 class="text-4xl font-bold tracking-tight text-defaultColor">
             Articles
           </h1>
@@ -35,7 +35,7 @@
                     <div class="w-2/4 mx-auto mt-5 rounded-lg overflow-hidden shadow-lg border border-gray-300 bg-white">
                         <div class="flex items-center justify-between px-4 py-3">
                             <div class="flex items-center">
-                                {{$article->title}}
+                                <p class="text-3xl font-bold text-gray-800">{{$article->title}}</p>
                             </div>
                             <button class="text-gray-500 hover:text-gray-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"
@@ -46,7 +46,7 @@
                             </button>
                         </div>
                         <div class="px-4 py-2">
-                            <p class="text-sm text-gray-800">{{$article->body}}Lorem ipsum dolor sit amet consectetur adipisicing elit. At mollitia quibusdam nam impedit necessitatibus, ipsum molestias corporis tempore in dicta et eligendi inventore deserunt ducimus doloremque blanditiis cumque pariatur dolor?</p>
+                            <p class="text-md text-gray-600">{{$article->body}}Lorem ipsum dolor sit amet consectetur adipisicing elit. At mollitia quibusdam nam impedit necessitatibus, ipsum molestias corporis tempore in dicta et eligendi inventore deserunt ducimus doloremque blanditiis cumque pariatur dolor?</p>
                         </div>
                     </div>
                 </div>
