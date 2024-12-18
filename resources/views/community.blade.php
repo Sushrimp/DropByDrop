@@ -13,7 +13,7 @@
     <div class="min-h-full">
         <x-navbar />
         <header class="bg-white">
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex justify-evenly">
                 <h1 class="text-4xl font-bold tracking-tight text-defaultColor">
                     Community
                 </h1>
@@ -23,11 +23,9 @@
                     <input type="text" placeholder="Search community post"
                         class="w-full px-10 py-2 bg-searchBg border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-backgroundColor focus:border-backgroundColor" />
                 </div>
-                @if(!Auth::guest())
-                    <a href="/newpost"
-                        class="bg-cyan-500 hover:bg-cyan-700 rounded-full bg-backgroundColor px-5 py-3 text-sm font-medium text-white">+
-                        Share your thought</a>
-                @endif
+                <a href="/newpost"
+                    class="bg-cyan-500 hover:bg-cyan-700 rounded-full bg-backgroundColor px-5 py-3 text-sm font-medium text-white">+
+                    Share your thought</a>
             </div>
         </header>
         <main class="bg-white">
@@ -59,6 +57,11 @@
                                 @if ($post['image'])
                                     <img class="w-full h-64 object-cover" src={{$post['image']}} alt="Image not found" />
                                 @endif
+                                <div class="p-4">
+                                    <button type="submit" class="px-4 py-2 bg-red-500 text-white font-bold rounded-md hover:bg-red-700 duration-150">
+                                        Like
+                                    </button>
+                                </div>
                                 @php
                                 @endphp
                             </article>
@@ -74,8 +77,13 @@
                             class="w-2/4 mx-auto mt-5 rounded-lg overflow-hidden shadow-lg border border-gray-300 bg-white">
                             <div class="flex items-center justify-between px-4 py-3">
                                 <div class="flex items-center">
-                                    <img class="w-10 h-10 rounded-full border border-gray-300"
-                                        src="https://via.placeholder.com/100" />
+                                    {{-- @if ({{ $post['user']['profilePicture'] }})
+                                        <img class="w-10 h-10 rounded-full border border-gray-300"
+                                        src="{{ $post['user']['profilePicture'] }}" />
+                                    @else --}}
+                                        <img class="w-10 h-10 rounded-full border border-gray-300"
+                                            src="https://via.placeholder.com/100" />
+                                    {{-- @endif --}}
                                     <div class="ml-3">
                                         <h3 class="text-sm font-bold text-gray-800">{{ $post['user']['name'] }}</h3>
                                         <p class="text-xs text-gray-500">5 mins •</p>
@@ -95,6 +103,11 @@
                             @if ($post['image'])
                                 <img class="w-full h-64 object-cover" src={{$post['image']}} alt="Image not found" />
                             @endif
+                            <div class="p-4">
+                                <button type="submit" class="px-4 py-2 bg-red-500 text-white font-bold rounded-md hover:bg-red-700 duration-150">
+                                    Like
+                                </button>
+                            </div>
                             @php
                             @endphp
                         </div>

@@ -71,7 +71,7 @@
             @foreach ($articles as $article)
             <div>
                     <div
-                        class="w-2/4 rounded-lg overflow-hidden shadow-lg border border-gray-300 bg-white">
+                        class="mx-8 rounded-lg overflow-hidden shadow-lg border border-gray-300 bg-white">
                         <div class="flex items-center justify-between px-4 py-3">
                             <div class="flex items-center font-bold">
                                 {{$article->title}}
@@ -87,6 +87,7 @@
                         <div class="px-4 py-2">
                             <p class="text-sm text-gray-800">{{$article->body}}Lorem ipsum dolor sit amet consectetur adipisicing elit. At mollitia quibusdam nam impedit necessitatibus, ipsum molestias corporis tempore in dicta et eligendi inventore deserunt ducimus doloremque blanditiis cumque pariatur dolor?</p>
                         </div>
+                        <img class="w-full h-64 object-cover" src="{{ $article->picture }}" alt="Image not found" />
                         @php
                         @endphp
                     </div>

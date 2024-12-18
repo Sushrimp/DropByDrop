@@ -54,4 +54,15 @@ class UserController extends Controller
 
         return view('profile', ['currUser' => $currUser, 'myPosts' => $myPosts]);
     }
+    public function pfpUpdate(Request $request){
+        $image = $request->file('image');
+        $mimeType = $image ? $image->getMimeType() : '';
+        $base64Image = $image ? 'data:' . $mimeType . ';base64,' . base64_encode(file_get_contents($image->getRealPath())) : '';
+
+        $userId = Auth::id();
+        $user = User::find($userId);
+        $user->profilePicture = $base64Image;
+        $user->save();
+        return view('profile');
+    }
 }

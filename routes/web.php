@@ -35,7 +35,11 @@ Route::get('/community/detail/{id}', [PostController::class, 'getPostDetail']);
 Route::get('/newpost', function () {
     return view('new-post');
 });
+Route::get('/newarticle', function () {
+    return view('new-article');
+});
 Route::post('/addPost', [PostController::class, 'addPost']);
+Route::post('/addArticle', [ArticleController::class, 'newArticle']);
 Route::post('/addReply', [ReplyController::class, 'addReply']);
 
 Route::post('/likePost', [LikeController::class, 'addLike']);
@@ -54,3 +58,4 @@ Route::get('/profile', [UserController::class, 'profile']);
 
 // localization
 Route::get('/locale/{locale}', [LocalizationController::class, 'setLocale']);
+Route::post('/pfpUpdate', [UserController::class, 'pfpUpdate']);
