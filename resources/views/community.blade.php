@@ -23,9 +23,11 @@
                     <input type="text" placeholder="Search community post"
                         class="w-full px-10 py-2 bg-searchBg border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-backgroundColor focus:border-backgroundColor" />
                 </div>
-                <a href="/newpost"
-                    class="bg-cyan-500 hover:bg-cyan-700 rounded-full bg-backgroundColor px-5 py-3 text-sm font-medium text-white">+
-                    Share your thought</a>
+                @if(!Auth::guest())
+                    <a href="/newpost"
+                        class="bg-cyan-500 hover:bg-cyan-700 rounded-full bg-backgroundColor px-5 py-3 text-sm font-medium text-white">+
+                        Share your thought</a>
+                @endif
             </div>
         </header>
         <main class="bg-white">

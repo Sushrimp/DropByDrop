@@ -49,6 +49,7 @@
         </div>
     </div>
 
+    @if(!Auth::guest())
     <form action={{ url('/addReply') }} method="POST" class="px-48">
         @csrf
         <div class="flex space-x-2">
@@ -60,6 +61,7 @@
             </button>
         </div>
     </form>
+    @endif
 
     @if($post['reply'])
     <div class="flex px-48 py-5 w-full">

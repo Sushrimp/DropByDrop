@@ -201,7 +201,7 @@
                                         <span class="absolute -inset-1.5"></span>
                                         <span class="sr-only">Open user menu</span>
                                         <img class="h-8 w-8 rounded-full"
-                                            src={{ asset("profile-circle-icon-512x512-zxne30hp.png")}}
+                                            src={{ asset("images/profile-circle-icon-512x512-zxne30hp.png")}}
                                             alt="">
                                     </button>
                                 </a>
