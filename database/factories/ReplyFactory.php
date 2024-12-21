@@ -19,7 +19,9 @@ class ReplyFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'postId' => 1,
+            'userId' => 1,
+            'description' => "ah",
         ];
     }
 

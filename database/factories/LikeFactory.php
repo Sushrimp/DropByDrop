@@ -20,7 +20,8 @@ class LikeFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'postId' => 0,
+            'userId' => 0,
         ];
     }
 
