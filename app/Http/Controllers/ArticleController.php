@@ -30,13 +30,18 @@ class ArticleController extends Controller
         $mimeType = $image ? $image->getMimeType() : '';
         $base64Image = $image ? 'data:' . $mimeType . ';base64,' . base64_encode(file_get_contents($image->getRealPath())) : '';
 
-        $newArticle = Article::factory()->withParams(
-            title: $title,
-            body: $body,
-            picture: $base64Image,
-        )->create();
+        // $newArticle = Article::factory()->withParams(
+        //     title: $title,
+        //     body: $body,
+        //     picture: $base64Image,
+        // )->create();
+        $newArticle = new Article();
+        $newArticle->title = $title;
+        $newArticle->body = $body;
+        $newArticle->picture = $base64Image;
+        $newArticle->save();
 
         $articles = Article::all();
-        return view("article", compact('articles'));
+        return redirect()->back();
     }
 }

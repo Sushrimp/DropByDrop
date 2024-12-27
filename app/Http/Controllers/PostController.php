@@ -23,12 +23,18 @@ class PostController extends Controller
         $base64Image = $image ? 'data:' . $mimeType . ';base64,' . base64_encode(file_get_contents($image->getRealPath())) : '';
 
         // dd($base64Image);
-        $post = Post::factory()->withParams(
-            userId: $userId,
-            title: $request->title,
-            body: $request->body,
-            image: $base64Image,
-        )->create();
+        // $post = Post::factory()->withParams(
+        //     userId: $userId,
+        //     title: $request->title,
+        //     body: $,
+        //     image: $base64Image,
+        // )->create();
+        $post = new Post();
+        $post->userId = $userId;
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->image = $base64Image;
+        $post->save();
 
         return back()->with('success', 'Post added successfully!');
     }

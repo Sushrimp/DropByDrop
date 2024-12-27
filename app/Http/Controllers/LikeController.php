@@ -12,10 +12,14 @@ class LikeController extends Controller
     public function addLike(Request $request){
         $userId = Auth::id();
 
-        $like = Like::factory()->withParams(
-            postId: $request->postId,
-            userId: $userId,
-        )->create();
+        // $like = Like::factory()->withParams(
+        //     postId: $request->postId,
+        //     userId: $userId,
+        // )->create();
+        $like = new Like();
+        $like->postId = $request->postId;
+        $like->userId = $userId;
+        $like->save();
 
         return back();
     }

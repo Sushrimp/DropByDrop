@@ -12,11 +12,16 @@ class ReplyController extends Controller
     public function addReply(Request $request){
         $userId = Auth::id();
 
-        $reply = Reply::factory()->withParams(
-            userId: $userId,
-            postId: $request->postId,
-            description: $request->description,
-        )->create();
+        // $reply = Reply::factory()->withParams(
+        //     userId: $userId,
+        //     postId: $request->postId,
+        //     description: $,request->desription
+        // )->create();
+        $reply = new Reply();
+        $reply->userId = $userId;
+        $reply->postId = $request->postId;
+        $reply->description = $request->description;
+        $reply->save();
 
         return back();
     }
