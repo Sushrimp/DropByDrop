@@ -17,7 +17,7 @@
         }
     ],
     "public": true,
-    "buildCommand": "npm install && npm run build && composer install --no-dev --optimize-autoloader",
+    "buildCommand": "npm install && npm run build",
     "outputDirectory": "public",
     "env": {
         "APP_CONFIG_CACHE": "/tmp/config.php",

@@ -19,14 +19,10 @@ class PostFactory extends Factory
     protected $model = Post::class;
     public function definition(): array
     {
-        if (!class_exists(\Faker\Factory::class)) {
-            throw new \Exception('Faker is not installed. Please install fakerphp/faker.');
-        }
-
         return [
-            'userId' => fake()->randomNumber(),
-            'title' => fake()->sentence(),
-            'body' => fake()->paragraph(),
+            'userId' => 1,
+            'title' => "Ipsum",
+            'body' => "Lorem",
             'image' => null,
         ];
     }
